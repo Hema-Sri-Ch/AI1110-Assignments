@@ -21,6 +21,8 @@ while n < 1001:
 		set.append(n)
 	n = n + 1
 
+# printing the solultion set of integers
+print(set)
 # y cordinates are obviously 0s since we are plotting integers on real axis
 y = list()
 while k > 0:
