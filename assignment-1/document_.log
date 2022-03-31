@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.29)  30 MAR 2022 15:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.29)  31 MAR 2022 17:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -133,27 +133,27 @@ LaTeX Font Info:    ... okay on input line 9.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(108.405pt, 380.69788pt, 108.405pt)
-* v-part:(T,H,B)=(108.405pt, 628.23685pt, 108.405pt)
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=380.69788pt
-* \textheight=628.23685pt
-* \oddsidemargin=36.13501pt
-* \evensidemargin=36.13501pt
-* \topmargin=-0.86499pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=57.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumnfalse
+* \@twocolumntrue
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -196,26 +196,35 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <images/Figure_1.png, id=1, 462.528pt x 346.896pt>
 File: images/Figure_1.png Graphic file (type png)
 <use images/Figure_1.png>
-Package pdftex.def Info: images/Figure_1.png  used on input line 68.
-(pdftex.def)             Requested size: 285.5234pt x 214.15227pt.
+Package pdftex.def Info: images/Figure_1.png  used on input line 69.
+(pdftex.def)             Requested size: 226.48395pt x 169.86406pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 69--70
+ [][] 
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<images/Figure_2.png, id=16, 462.528pt x 346.896pt>
+<images/Figure_2.png, id=3, 462.528pt x 346.896pt>
 File: images/Figure_2.png Graphic file (type png)
 <use images/Figure_2.png>
-Package pdftex.def Info: images/Figure_2.png  used on input line 93.
-(pdftex.def)             Requested size: 190.34894pt x 142.76288pt.
- [2 <./images/Figure_1.png> <./images/Figure_2.png>] (./document_.aux)
+Package pdftex.def Info: images/Figure_2.png  used on input line 96.
+(pdftex.def)             Requested size: 226.48395pt x 169.86406pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 96--97
+ [][] 
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+ <./images/Figure_1.png> <./images/Figure_2.png>] (./document_.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -223,11 +232,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  2227 strings out of 483183
  30473 string characters out of 5966292
- 262805 words of memory out of 5000000
+ 265768 words of memory out of 5000000
  17244 multiletter control sequences out of 15000+600000
  539894 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,7n,34p,210b,226s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,7n,34p,210b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
@@ -236,10 +245,10 @@ f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msbm10.pfb>
-Output written on document_.pdf (2 pages, 118160 bytes).
+Output written on document_.pdf (1 page, 123555 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 29 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
