@@ -29,19 +29,18 @@ while k > 0:
 	k = k - 1
 
 
-x = np.linspace(-6, 6, 100)
-y1 = -2 + 10*x
+x = np.linspace(-6, 6, 1000)
+y_1 = -2 + 10*x
 l1 = [10, -2]
-plt.plot(x, y1, 'b', label = "y1")
-y2 = 13*x + 10
+plt.plot(x, y_1, 'b', label = "y1")
+y_2 = 13*x + 10
 l2 = [13, 10]
-plt.plot(x, y2, 'g', label = "y2")
-y3 = 24 + 10*x
+plt.plot(x, y_2, 'g', label = "y2")
+y_3 = 24 + 10*x
 l3 = [10, 24]
-plt.plot(x, y3, 'r', label = "y3")
+plt.plot(x, y_3, 'r', label = "y3")
 plt.xlabel('x-axis')
 plt.ylabel('y-axis')
-
 
 
 """ the values of x that obey the inequality y1 <= y2 < y3 are
@@ -54,19 +53,20 @@ def intersec(a,b,c,d):
 	xi = (b-d)/(c-a)
 	yi = a*xi + b
 	return xi, yi
-
 # (x1,y1) intersection point of y1 and y2
 # (x2,y2) intersection point of y2 and y3
 x1, y1 = intersec(l1[0], l1[1],l2[0], l2[1])
 x2, y2 = intersec(l2[0], l2[1], l3[0], l3[1])
-plt.scatter(x1, y1, c = 'black', label = 'intersection points')
+plt.fill_between(x,y_1,y_3, where=[(x>=x1) and (x<x2) for x in x], color = 'green', alpha=0.3, label = 'region at where y1 <= y2 < y3')
+
+plt.scatter(x1, y1, c = 'black')
 plt.axvline(x = x1, color = 'grey', linestyle = '--')
 
 plt.scatter(x2, y2, c = 'black')
 plt.axvline(x = x2, color = 'grey', linestyle = '--')
 plt.axhline(y=0, color = 'black')
 plt.axvline(x=0, color = 'black')
-plt.scatter(set, y, c = "blue", label = "points in the required region")
+plt.scatter(set, y, c = "blue", label = "x co-ordinates in this region")
 
 plt.grid()
 plt.legend(loc = "upper left")
