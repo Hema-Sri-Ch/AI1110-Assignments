@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{mathtools}
 \usepackage[a4paper, total={6in, 8in}, margin = 1in]{geometry}
+\usepackage{enumitem}
 \usepackage{graphicx}
 \graphicspath{{images/}}
 \usepackage{amsmath}
@@ -17,34 +18,34 @@ Solve the following inequation, write down the solution set and represent it on 
   -2 + 10x \leq 13x + 10 < 24 + 10x,  x\in \mathbb{Z} 
 \end{align*}
 \section*{Solution}
-\begin{align*}
+\begin{align}
   -2 + 10x \leq 13x + 10 < 24 + 10x,  x\in \mathbb{Z} 
-\end{align*}
+\end{align}
 \noindent Let us solve the above expression geometrically.
 
 now consider each equation in this expression as a line,i.e., $L_1$ $L_2$ ans $L_3$
-\begin{align*}
+\begin{align}
 L_1 &\equiv 10x-y-2  \\
 L_2 &\equiv 13x-y+10 \\
 L_3 &\equiv 10x-y+24
-\end{align*}
+\end{align}
 Clearly slopes of $L_1$ and $L_3$ are same i.e., $slope = 10$\newline
 and $L_1 \leq L_2 < L_3 $, so the integral values of x on x-axis satisfying this inequality are the required solution set.
 In vector form,
-\begin{align*}
+\begin{align}
 	L_1 &\equiv \myvec{10 \\ -1}\vec{x} = 2 \\
 	L_2 &\equiv \myvec{13 \\ -1} \vec{x} = -10 \\
 	L_3 &\equiv \myvec{10 \\ -1}\vec{x} = -24
-\end{align*}
+\end{align}
 So we need to find the range of x at where the line $L_2$ lies between between line $L_1$ and the line $L_3$
 
 We can obtain the intersection point of $L_1$ and $L_2$ by the following way,
-\begin{align*}
+\begin{align}
 	\myvec{10 & -1 \\
 		13 & -1}\vec{x} &= \myvec{2 \\ -10} 
-\end{align*}
+\end{align}
 The augmented matrix for the above matrix equation is 
-\begin{align*}
+\begin{align}
 	\myvec{ 10 & -1 & \vrule & 2 \\
 		13 & -1 & \vrule & -10} \\
 	\xleftrightarrow[]{R_2 \leftarrow 10R_2-13R_1}
@@ -60,15 +61,15 @@ The augmented matrix for the above matrix equation is
 		\myvec{ 1 & 0 & \vrule & -4 \\
 			0 & 1 & \vrule & -42} \\
 	\implies \vec{x} = \myvec{-4 \\ -42}
-\end{align*}
+\end{align}
 Hence the point of intersection of lines $L_1$ and $L_2$ is $\myvec{-4 \\ -42}$ .\\
 Similarly we get the x value at intersection point of lines $L_2$ and $L_3$
-\begin{align*}
+\begin{align}
 	\myvec{10 & -1 \\
 		13 & -1}\vec{x} &= \myvec{-24 \\ -10}
-\end{align*}
+\end{align}
 The augmented matrix for the above matrix equation is 
-\begin{align*}
+\begin{align}
 	\myvec{ 10 & -1 & \vrule & -24 \\
 		13 & -1 & \vrule & -10} \\
 	\xleftrightarrow[]{R_2 \leftarrow 10R_2-13R_1}
@@ -84,7 +85,7 @@ The augmented matrix for the above matrix equation is
 		\myvec{ 1 & 0 & \vrule &  4.67\\
 			0 & 1 & \vrule & 70.67} \\
 	\implies \vec{x} = \myvec{4.67 \\ 70.67}
-\end{align*}
+\end{align}
 Hence the point of intersection of lines $L_2$ and $L_3$ is $\myvec{4.67 \\ 70.67}$.\\
 \vspace{16pt}
 
