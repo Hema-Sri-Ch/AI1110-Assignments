@@ -1,0 +1,225 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+%\RequirePackage{amsmath}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+%
+% \usepackage{setspace}
+ \usepackage{gensymb}
+%\doublespacing
+ \usepackage{polynom}
+%\singlespacing
+%\usepackage{silence}
+%Disable all warnings issued by latex starting with "You have..."
+%\usepackage{graphicx}
+\usepackage{amssymb}
+%\usepackage{relsize}
+\usepackage[cmex10]{amsmath}
+%\usepackage{amsthm}
+%\interdisplaylinepenalty=2500
+%\savesymbol{iint}
+%\usepackage{txfonts}
+%\restoresymbol{TXF}{iint}
+%\usepackage{wasysym}
+\usepackage{amsthm}
+%\usepackage{pifont}
+%\usepackage{iithtlc}
+% \usepackage{mathrsfs}
+% \usepackage{txfonts}
+ \usepackage{stfloats}
+% \usepackage{steinmetz}
+ \usepackage{bm}
+% \usepackage{cite}
+% \usepackage{cases}
+% \usepackage{subfig}
+%\usepackage{xtab}
+\usepackage{longtable}
+%\usepackage{multirow}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+\usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+% \usepackage{circuitikz}
+% \usepackage{verbatim}
+%\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+%\usepackage{stmaryrd}
+%\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+  %optionally (for landscape tables embedded in another document): %%
+    \usepackage{lscape}     
+% \usepackage{multicol}
+% \usepackage{chngcntr}
+%\usepackage{enumerate}
+
+%\usepackage{wasysym}
+%\newcounter{MYtempeqncnt}
+\DeclareMathOperator*{\Res}{Res}
+\DeclareMathOperator*{\equals}{=}
+%\renewcommand{\baselinestretch}{2}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+%\lstset{
+%language=tex,
+%frame=single, 
+%breaklines=true
+%}
+\begin{document}
+
+%
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+%\newtheorem{thm}{Theorem}[section] 
+%\newtheorem{defn}[thm]{Definition}
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\bibliographystyle{IEEEtran}
+%\bibliographystyle{ieeetr}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+%\providecommand{\abs}[1]{\left\vert#1\right\vert}
+%\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+%\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+%\providecommand{\mean}[1]{E\left[ #1 \right]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+%\numberwithin{equation}{section}
+%\numberwithin{figure}{section}
+%\numberwithin{table}{section}
+%\numberwithin{equation}{subsection}
+%\numberwithin{problem}{section}
+%\numberwithin{definition}{section}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+%\renewcommand{\thefigure}{\theproblem.\arabic{figure}}
+\renewcommand{\thefigure}{\theproblem}
+%\setlist[enumerate,1]{before=\renewcommand\theequation{\theenumi.\arabic{equation}}
+%\counterwithin{equation}{enumi}
+%\renewcommand{\theequation}{\arabic{subsection}.\arabic{equation}}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+
+
+\title{
+	AI1110 Assignment 2
+}
+\author{ Hema Sri Cheekatla, CS21BTECH11013% <-this % stops a space
+}	
+
+\maketitle
+\begin{flushleft}
+\textbf{Question 21a:}\newline
+The cost function of a product is given by $C(x) = \frac{x^3}{3}-45x^2-900x+36$ where x is number of units produced. How many units should be produced to minimise the marginal cost?\newline
+\textbf{Solution:}\newline
+The marginal cost $MC = \frac{\Delta C}{\Delta Q}$ where,\newline
+$\Delta C$ is change in cost\newline
+$\Delta Q$ is change in quantity \newline
+\begin{table}[h] 
+\caption{\textbf{Table consisting symbols, formulae, description}}
+\label{table:1}
+\input{tables/table}
+\end{table}
+
+Hence Marginal Cost MC is given by,
+\begin{align}
+    MC &= \frac{d}{dx}\brak{C(x)} \\
+    &= \frac{d}{dx}\brak{\frac{x^3}{3}-45x^2-900x+36}\\
+    &= \frac{3x^2}{3}-2\times45x-900+0\\
+    \implies MC &= x^2 -90x -900 
+\end{align}
+Now let $MC = y = f(x)$\newline
+We need to find the number of units to be produced such that the Marginal cost is minimum.This Marginal cost $\brak{y=f(x)}$ is minimum for some $x=c$, at where it obeys the following conditions
+\begin{enumerate}[label=(\roman*)]
+    \item $\frac{dy}{dx}=0$ at x=c
+    \item $\frac{d^2y}{dx^2}>0$ at x=c
+\end{enumerate}
+Now let us consider $\frac{dy}{dx}$
+\begin{align}
+    \frac{dy}{dx} &= \frac{d}{dx}\brak{x^2 -90x -900}\\
+    \implies \frac{dy}{dx} &= 2x-90 =  f^{\prime}(x)
+\end{align}
+From first condition, at x=c, $\frac{dy}{dx}=0$
+\begin{align}
+    i.e., f^{\prime}(c) &= 0 \\
+    2c-90 &= 0 \\
+    \implies c &= 45 
+\end{align}
+Hence at x = 45, $\frac{dy}{dx}=0$\newline
+Now let us consider the second condition at x=45
+\begin{align}
+    \frac{d^2y}{dx^2} &> 0 \\
+    \frac{d}{dx}\brak{\frac{dy}{dx}} &> 0  \\
+    \frac{d}{dx}\brak{2x-90} &> 0 \\
+    2 &> 0
+\end{align}
+Hence the second condition is also valid at x = 45\newline
+Therefore at $x = 45$ ,  $y=f(x)$ is minimum, i.e., Marginal cost is minimum if we produce 45 units.\newline
+
+Hence the Number of units that are to be produced to minimise the marginal cost is 45 units.
+\end{flushleft}
+\end{document}
