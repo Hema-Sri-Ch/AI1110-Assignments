@@ -10,7 +10,8 @@
 %\singlespacing
 %\usepackage{silence}
 %Disable all warnings issued by latex starting with "You have..."
-%\usepackage{graphicx}
+\usepackage{graphicx}
+\graphicspath{{images/}}
 \usepackage{amssymb}
 %\usepackage{relsize}
 \usepackage[cmex10]{amsmath}
@@ -163,14 +164,8 @@ columns=fullflexible
      \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
-
-
-\title{
-	AI1110 Assignment 2
-}
-\author{ Hema Sri Cheekatla, CS21BTECH11013% <-this % stops a space
-}	
-
+\title{AI1110 Assignment 2}
+\author{ Hema Sri Cheekatla, CS21BTECH11013}	
 \maketitle
 \begin{flushleft}
 \textbf{Question 21a:}\newline
@@ -193,33 +188,36 @@ Hence Marginal Cost MC is given by,
     \implies MC &= x^2 -90x -900 
 \end{align}
 Now let $MC = y = f(x)$\newline
-We need to find the number of units to be produced such that the Marginal cost is minimum.This Marginal cost $\brak{y=f(x)}$ is minimum for some $x=c$, at where it obeys the following conditions
-\begin{enumerate}[label=(\roman*)]
-    \item $\frac{dy}{dx}=0$ at x=c
-    \item $\frac{d^2y}{dx^2}>0$ at x=c
-\end{enumerate}
-Now let us consider $\frac{dy}{dx}$
+We need to find the number of units to be produced \brak{c} such that the Marginal cost is minimum. Since $x=c$ is the required number of units that are to be produced, it must be a whole number. 
 \begin{align}
-    \frac{dy}{dx} &= \frac{d}{dx}\brak{x^2 -90x -900}\\
-    \implies \frac{dy}{dx} &= 2x-90 =  f^{\prime}(x)
+f(c) &= \min\limits_{x}\cbrak{f(x)},x \in \vec{W} \\
+&= \min\limits_{x}\cbrak{{x^2-90x-900}} \\
+&= \min\limits_{x}\cbrak{{x^2-2\brak{45}x+2025-2925}} \\
+&= \min\limits_{x}\cbrak{{\brak{x-45}^2-2925}}, x \in \vec{W} 
 \end{align}
-From first condition, at x=c, $\frac{dy}{dx}=0$
+But we know that, 
 \begin{align}
-    i.e., f^{\prime}(c) &= 0 \\
-    2c-90 &= 0 \\
-    \implies c &= 45 
+    \brak{x-45}^2 &\geq 0, \\
+%\end{align}
+%Our expression $\brak{x-45}^2-2925$ follows
+%\begin{align}
+    \implies \brak{x-45}^2-2925 &\geq -2925 \\
+    \implies \min\cbrak{{\brak{x-45}^2-2925}} &= -2925 \\
+    \implies f(c) &= -2925
 \end{align}
-Hence at x = 45, $\frac{dy}{dx}=0$\newline
-Now let us consider the second condition at x=45
+We obtain the minimum at where,
 \begin{align}
-    \frac{d^2y}{dx^2} &> 0 \\
-    \frac{d}{dx}\brak{\frac{dy}{dx}} &> 0  \\
-    \frac{d}{dx}\brak{2x-90} &> 0 \\
-    2 &> 0
+    \brak{x-45}^2 &= 0 \\
+    \implies x &= 45
 \end{align}
-Hence the second condition is also valid at x = 45\newline
-Therefore at $x = 45$ ,  $y=f(x)$ is minimum, i.e., Marginal cost is minimum if we produce 45 units.\newline
+Since $45 \in \vec{W}$ and $f(45)=-2925$, $c=45$. \newline 
+Therefore the number of units that are to be produced to get the minimum value of Marginal cost is 45 units.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \columnwidth]{fig_1.png}
+    \caption{Marginal cost function $MC=x^2 -90x -900$}
+    \label{fig-1}
+\end{figure}
 
-Hence the Number of units that are to be produced to minimise the marginal cost is 45 units.
-\end{flushleft}
+%\end{flushleft}
 \end{document}
