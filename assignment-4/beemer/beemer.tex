@@ -102,12 +102,12 @@ A fair coin with 1 marked on one face and 6 on the other and a fair die are both
 The coin can turn up either 1 or 6 only, where as die can turn up 1, 2, 3, 4, 5, 6\newline
 As well as the coin and the die both are fair, hence the chance of getting any number is equally probable for both coin and die.\newline
 i.e., \newline
-$ \pr{A = i} = \frac{1}{2} $ , where i = 1, 6; \newline
-$ \pr{A = i} = \frac{1}{6} $ , where i = 1, 2, 3, 4, 5, 6; \newline
+$ \pr{A_i} = \frac{1}{2} $ , where i = 1, 6; \newline
+$ \pr{A_i} = \frac{1}{6} $ , where i = 1, 2, 3, 4, 5, 6; \newline
 And these two are indenpendent events, hence we can say,
-\begin{align*}
-	\pr{A|B} = \pr{B|A} = \pr{A}\pr{B}
-\end{align*}
+\begin{align}
+	\pr{AB} = \pr{BA} = \pr{A}\pr{B}
+\end{align}
 where we can assume A as event of tossing coin and B is event of tossing die \newline
 \end{frame}
 
@@ -116,11 +116,11 @@ where we can assume A as event of tossing coin and B is event of tossing die \ne
 Since the coin can show only 1 or 6, the case of getting sum is possible only when coin turned up 1 and die turned up 2 \newline
 
 Hence the Probability of getting sum of numbers that turned up as 3 is given by as follows,
-\begin{align*}
-	\pr{A = 1 | B = 2} &= \pr{A = 1} \pr{B = 2} \\
+\begin{align}
+	\pr{A_1 B_2} &= \pr{A_1} \pr{B_2} \\
 	&= \frac{1}{2} \times \frac{1}{6} \\
 	&= \frac{1}{12}
-\end{align*}
+\end{align}
 \begin{block}{}
 Hence the required probablility is $\frac{1}{12}$
 \end{block}
@@ -131,11 +131,11 @@ Hence the required probablility is $\frac{1}{12}$
 Since the coin can show only 1 or 6, the case of getting sum is possible only when coin turned up 6 and die turned up 6 \newline
 
 Hence the Probability of getting sum of numbers that turned up as 12 is given by as follows,
-\begin{align*}
-	\pr{A = 6 | B = 6} &= \pr{A = 6} \pr{B = 6} \\
+\begin{align}
+	\pr{A_6B_6} &= \pr{A_6} \pr{B_6} \\
 	&= \frac{1}{2} \times \frac{1}{6} \\
 	&= \frac{1}{12}
-\end{align*}
+\end{align}
 \begin{block}{}
 Hence the required probablility is $\frac{1}{12}$
 \end{block}
