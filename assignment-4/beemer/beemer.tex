@@ -1,0 +1,146 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+ \usepackage{gensymb}
+ \usepackage{polynom}
+\usepackage{amssymb}
+\usepackage[cmex10]{amsmath}
+\usepackage{amsthm}
+ \usepackage{stfloats}
+ \usepackage{bm}
+ \usepackage{longtable}
+\usepackage{enumitem}
+ \usepackage{mathtools}
+ \usepackage{tikz}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage[latin1]{inputenc}  
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+
+\def\inputGnumericTable{}
+
+
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+% Title page details: 
+\title{Probability, Exercise 16.3, Q5} 
+\author{Hema Sri Cheekatla, CS21BTECH11013}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Outline}
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Question}
+A fair coin with 1 marked on one face and 6 on the other and a fair die are both tossed. Find the probability that the sum of the numbers that turn up is 
+\begin{itemize}
+    \item[o] 3
+    \item[o] 12
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Solution:}
+The coin can turn up either 1 or 6 only, where as die can turn up 1, 2, 3, 4, 5, 6\newline
+As well as the coin and the die both are fair, hence the chance of getting any number is equally probable for both coin and die.\newline
+i.e., \newline
+$ \pr{A = i} = \frac{1}{2} $ , where i = 1, 6; \newline
+$ \pr{A = i} = \frac{1}{6} $ , where i = 1, 2, 3, 4, 5, 6; \newline
+And these two are indenpendent events, hence we can say,
+\begin{align*}
+	\pr{A|B} = \pr{B|A} = \pr{A}\pr{B}
+\end{align*}
+where we can assume A as event of tossing coin and B is event of tossing die \newline
+\end{frame}
+
+\section{Sum of numbers turned up is 3:}
+\begin{frame}{Sum of numbers turned up is 3}
+Since the coin can show only 1 or 6, the case of getting sum is possible only when coin turned up 1 and die turned up 2 \newline
+
+Hence the Probability of getting sum of numbers that turned up as 3 is given by as follows,
+\begin{align*}
+	\pr{A = 1 | B = 2} &= \pr{A = 1} \pr{B = 2} \\
+	&= \frac{1}{2} \times \frac{1}{6} \\
+	&= \frac{1}{12}
+\end{align*}
+\begin{block}{}
+Hence the required probablility is $\frac{1}{12}$
+\end{block}
+\end{frame}
+
+\section{Sum of numbers turned up is 12:}
+\begin{frame}{Sum of numbers turned up is 12}
+Since the coin can show only 1 or 6, the case of getting sum is possible only when coin turned up 6 and die turned up 6 \newline
+
+Hence the Probability of getting sum of numbers that turned up as 12 is given by as follows,
+\begin{align*}
+	\pr{A = 6 | B = 6} &= \pr{A = 6} \pr{B = 6} \\
+	&= \frac{1}{2} \times \frac{1}{6} \\
+	&= \frac{1}{12}
+\end{align*}
+\begin{block}{}
+Hence the required probablility is $\frac{1}{12}$
+\end{block}
+\end{frame}
+
+% Blocks frame 
+
+\end{document}
