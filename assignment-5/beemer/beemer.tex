@@ -142,7 +142,7 @@ the probability of two successes.
 \section{Solution}
 On throwing a pair of dice, getting doublet is success and we are throwing the pair of dice 4 times. \newline
 \textbf{Doublets: (1,1), (2,2), (3,3), (4,4), (5,5), (6,6)} \newline
-Consider one event of getting success represented by random variable X as shown 
+Consider one event of getting success represented by a Bernoulli random variable X as shown 
 \begin{table}[h]
 	\caption{Events for X}
 	\label{tab:mesh}
@@ -158,7 +158,7 @@ Consider one event of getting success represented by random variable X as shown
 \end{frame}
 
 \begin{frame}{}
-Now consider another event of throwing this pair of dice 4 times and represent the corresponding outcomes by the Bernoulli Random Variable Y as shown
+Now consider another event of throwing this pair of dice 4 times and represent the corresponding outcomes by the Binomial Random Variable Y as shown
 \begin{table}[h]
 	\caption{Events for Y}
 	\label{tab:mesh}
@@ -184,11 +184,11 @@ Hence the probability of getting success twice is given by,
 	P_Y(2) &= \frac{25}{216}
 \end{align}
 \begin{block}{}
-Hence the required probablility is $\frac{25}{216}$
+Hence the required probability is $\frac{25}{216}$
 \end{block}
 \end{frame}
 \begin{frame}
-	Now the Probability Mass Funtion of Y is as follows
+	Now the Probability Mass Function of Y is as follows
 \begin{figure}[h]
 	\includegraphics[width = 0.5\textwidth]{plot}
 	\label{fig:mesh}

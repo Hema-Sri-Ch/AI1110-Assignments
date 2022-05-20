@@ -103,12 +103,12 @@ columns=fullflexible
 \author{ Hema Sri Cheekatla, CS21BTECH11013}	
 \maketitle
 \begin{flushleft}
-\textbf{Probablility Exercise 13.5, Q2}
+\textbf{Probability Exercise 13.5, Q2}
 A pair of dice is thrown 4 times. If getting a doublet is considered a success, find
 the probability of two successes.
 \textbf{Solution:}
 A pair of dice is thrown 4 times,\newline
-Let us consider the event of throwing a pair of dice for obtaining a doublet \brak{Success}. Let us represent the outcomes of this event by the random variable X such that $X \in \cbrak{0, 1}$ \newline
+Let us consider the event of throwing a pair of dice for obtaining a doublet \brak{Success}. Let us represent the outcomes of this event by the Bernoulli random variable X such that $X \in \cbrak{0, 1}$ \newline
 \begin{table}[h]
     \centering
 	\caption{Events for X}
@@ -118,15 +118,15 @@ Let us consider the event of throwing a pair of dice for obtaining a doublet \br
 
 Doublets : $\cbrak{\brac{1, 1}, \brak{2, 2}, \brak{3, 3}, \brak{4, 4}, \brak{5, 5}, \brak{6, 6}}$\newline
 Hence the probability of getting a doublet is given by $P_X(1) = \frac{6}{36} = \frac{1}{6}$ \newline
-And the probablility of not getting doublet is given by $P_X(0) = 1-\frac{1}{6} = \frac{5}{6}$ \newline
+And the probability of not getting doublet is given by $P_X(0) = 1-\frac{1}{6} = \frac{5}{6}$ \newline
 
-Now consider throwing this pair of dice for 4 times, and let the outcomes of this event are represented by the Bernouli Random Variable Y such that $Y \in \cbrak{0, 1, 2, 3, 4}$
+Now consider throwing this pair of dice for 4 times, and let the outcomes of this event are represented by the Binomial Random Variable Y such that $Y \in \cbrak{0, 1, 2, 3, 4}$
 \begin{table}[h]
 	\caption{Events of Y}
 	\label{tab:mesh}
 	\input{tables/table2.tex}
 \end{table}
-The corresponding probablilities of this Bernouli Random Variable is given as follows,
+The corresponding probabilities of this Binomial Random Variable is given as follows,
 \begin{align}
 	P_Y(k) &= \begin{cases} \comb{n}{k} p^k q^{n-k} , & k = 1,2,\dots ,n \\
 	0 , & otherwise \end{cases}
@@ -139,7 +139,7 @@ Now the probability of getting two successes means Y = 2
 	P_Y(2) &= \comb{4}{2} \brak{\frac{1}{6}}^2 \brak{\frac{5}{6}}^{4-2} \\
 	P_Y(2) &= \frac{25}{216}
 \end{align}
-Hence the required probablility is $\frac{25}{216}$ \newline
+Hence the required probability is $\frac{25}{216}$ \newline
 Corresponding PMF
 \begin{figure}[h]
     \centering
