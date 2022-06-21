@@ -147,17 +147,17 @@ of x.\newline
 
 Let $y_k$ be the $k^{th}$ number assuming that all the numbers are arranged in ascending order\newline
 
-$y_k < x_u < x_{k+r-1}$, iff atleast k and atmost $k+r-1$ of the samples $x_i$ are less than $x_u$
+$y_k < x_u < y_{k+r}$, iff atleast k and atmost $k+r-1$ of the samples $x_i$ are less than $x_u$
 
 \end{frame}
 
 \begin{frame}{Concept}
-    The event $\cbrak{y_k < x_u < y_{k+r-1}}$ occurs iff number of success of event $\cbrak{x \leq x_u}$ in n repetitions of the experiment is atleast $k$ and atmost $k+r-1$.\newline
+    The event $\cbrak{y_k < x_u < y_{k+r}}$ occurs iff number of success of event $\cbrak{x \leq x_u}$ in n repetitions of the experiment is atleast $k$ and atmost $k+r-1$.\newline
 
     And since $\pr{x \leq x_u} = u$ which means success probability $p=u$, we can obtain the following
     
     \begin{align}
-        \pr{y_k < x_u < y_{k+r-1}} &= \sum_{m=k}^{k+r-1} \myvec{n \\ m} u^m (1-u)^{n-m} 
+        \pr{y_k < x_u < y_{k+r}} &= \sum_{m=k}^{k+r-1} \myvec{n \\ m} u^m (1-u)^{n-m} 
     \end{align}
 
 \end{frame}
@@ -166,7 +166,7 @@ $y_k < x_u < x_{k+r-1}$, iff atleast k and atmost $k+r-1$ of the samples $x_i$ a
     On approximation of above equation and assuming that X is a Normal or Gaussian Random Variable and n is large, for specific value of u,
     we obtain the following
     \begin{align}
-        \pr{y_k < x_u < y_{k+r-1}} &= G(\frac{k + r - 0.5 - nu}{\sqrt{nu(1-u)}}) - G(\frac{k - 0.5 - nu}{\sqrt{nu(1-u)}}) = \gamma
+        \pr{y_k < x_u < y_{k+r}} &= G(\frac{k + r - 0.5 - nu}{\sqrt{nu(1-u)}}) - G(\frac{k - 0.5 - nu}{\sqrt{nu(1-u)}}) = \gamma
      \end{align}
      Where, G is a Gaussian distribution function
      \begin{align}
