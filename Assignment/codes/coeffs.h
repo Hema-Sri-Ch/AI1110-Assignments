@@ -15,6 +15,9 @@ double **transpose(double **a,  int m, int n);
 void uniform(char *str, int len);
 void gaussian(char *str, int len);
 double mean(char *str);
+double mean2(char *str);
+double variance(char *str);
+void required(char *str, int len);
 //End function declaration
 
 
@@ -316,13 +319,38 @@ double variance(char *str){
 
 //Defining function for generating required random variables
 void required(char *str, int len){
+	FILE *fp1, *fp2;
+	fp1 = fopen(str, "w");
+	fp2 = fopen("uni.dat", "r");
+	double x;
+	//generating numbers
+	while(fscanf(fp2, "%lf", &x) != EOF){
+		fprintf(fp1, "%lf\n", -2*log(1-x));
+	}
+	fclose(fp1);
+	fclose(fp2);
+}
+//End function for generating required random variables
+
+// Generating a random number in the range of 0 to 1
+double Rand(){
+	return (double)rand()/RAND_MAX;
+}
+
+// Defining Triangular random variables
+void triangular(char *str, int len){
 	FILE *fp;
 	fp = fopen(str, "w");
 	int i;
-	//generating numbers
-	for(i=0; i<len; i++){
-		fprintf(fp, "%lf\n", -2*(1 - log(((double)rand()/RAND_MAX))));
+	double U_1;
+	double U_2;
+	double T;
+	for (i = 0; i < len; i++)
+	{
+		U_1 = Rand();
+		U_2 = Rand();
+		T = U_1 + U_2
+		fprintf(fp,"%lf\n",T);
 	}
 	fclose(fp);
 }
-//End function for generating required random variables
